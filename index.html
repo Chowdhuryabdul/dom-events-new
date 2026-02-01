@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Events</title>
+</head>
+<body>
+<h1>This is the DOM events</h1>
+<!-- option 1 for event handler. it will never be used  -->
+<button onclick="console.log(7);">Click Me</button>
+<button onclick="console.log(666);">Another Button</button>
+<button onclick="console.log('i am a student');">Third Button</button>
+<br>
+<!-- option 2 for event handler. it will be used for sometime  -->
+<button onclick="makeYellow()">make Yellow</button>
+<button onclick="makeRed()">Make red</button>
+<br><!-- option 3 for event handler. it will not be used reguler  -->
+<button id="btn-make-blue">Make Blue</button>
+<button id="btn-make-purple">Make Purple</button>
+
+<!-- option 4 - add event listner and it is used very common -->
+ <button id="btn-make-pink">Make pink</button>
+<script>
+//  document.getElementById().addEventListener('event type', handler)
+document.getElementById('btn-make-pink').addEventListener('click', function makepink(){
+  console.log(777777);
+  document.body.style.backgroundColor = 'pink'
+})
+
+</script>
+
+
+  <script src="js/events.js"></script>  
+</body>
+</html>
