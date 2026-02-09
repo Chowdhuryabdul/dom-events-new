@@ -33,7 +33,7 @@ document.getElementById('babul-ol').addEventListener('click', function(){
     console.log('The olis clicked');
 }) */
 
-document.getElementById('input-text').addEventListener('keyup', function(event){
+/* document.getElementById('input-text').addEventListener('keyup', function(event){
     const text = event.target.value 
     console.log(text);
     const deleteBtn = document.getElementById('delete-btn');
@@ -44,4 +44,25 @@ document.getElementById('input-text').addEventListener('keyup', function(event){
     }else{
         deleteBtn.setAttribute('disabled', true)
     }
+}); */
+
+
+/* const items = document.getElementsByClassName('list-item');
+for(const item of items){
+    item.addEventListener('click', function(event){
+        event.target.parentNode.removeChild(event.target)
+    })
+} */
+
+    document.getElementById('propagate-ol').addEventListener('click', function(event){
+        event.target.parentNode.removeChild(event.target)
+        // console.log('want to add');
+    })
+document.getElementById('add-new').addEventListener('click', function(event){
+    const text = document.createElement('li');
+    text.innerText = 'this is the nw items'
+    text.style.backgroundColor = 'red'
+    const section = document.getElementById('propagate-ol')
+    section.appendChild(text)
+    // console.log(event.target);
 })
