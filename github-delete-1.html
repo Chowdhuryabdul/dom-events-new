@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">I will show howt delete the ext when it is similar to the word in the btn</h1>
+    <input id="input-field" type="text" placeholder="Write delete">
+    <button id="btn-dlt" disabled>Delete</button>
+
+    <script>
+        document.getElementById('input-field').addEventListener('keyup', function(event){
+        const textWhatIsWritten = event.target.value;
+        const btnDelet = document.getElementById
+        ('btn-dlt')
+        const title = document.getElementById('title')
+        if(textWhatIsWritten === 'delete'){
+            console.log('typed delete');
+            btnDelet.removeAttribute ('disabled')
+            title.style.display = 'none'
+        }else{
+            console.log('sometthing else');
+            btnDelet.setAttribute('disabled', true)
+        }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The practice of event delegate</title>
+</head>
+<body>
+    <h1>i would like to practice it</h1>
+    <ol id="item-list">
+        <li class="item">this is the item - 1</li>
+        <li class="item">this is the item - 2</li>
+        <li class="item">this is the item - 3</li>
+        <li class="item">this is the item - 4</li>
+        <li class="item">this is the item - 5</li>
+        <li class="item">this is the item - 6</li>
+    </ol>
+    <button id="add-btn">Added items</button>
+
+    <script>
+       /*  const items = document.getElementsByClassName('item');
+        for(const item of items){
+            item.addEventListener('click', function(event){
+                // console.log(event.target);
+                event.target.parentNode.removeChild(event.target)
+            })
+        } */
+       document.getElementById('item-list').addEventListener('click', function(event){
+        event.target.parentNode.removeChild(event.target)
+       })
+        document.getElementById('add-btn').addEventListener('click', function(event){
+        const li = document.createElement('li');
+        li.innerText = 'This is the new item';
+        li.style.color = 'green'
+        const mainSection = document.getElementById('item-list');
+        mainSection.appendChild(li)
+        })
+    </script>
+</body>
+</html>

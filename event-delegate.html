@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event delegate</title>
+</head>
+<body>
+    <h1>Explore the conception of delegation</h1>
+    <ol id="item-list">
+        <li class="item">my awesome item - 1</li>
+        <li class="item">my awesome item - 2</li>
+        <li class="item">my awesome item - 3</li>
+        <li class="item">my awesome item - 4</li>
+        <li class="item">my awesome item - 5</li>
+        <li class="item">my awesome item - 6</li>
+    </ol>
+    <button id="add-item">Add New Item</button>
+    <script>
+        // Here it is shown that how i can remove a element by clicking. it is worked in the original element in this process, but not in the dynamic contents. so i need to add event handler in the parent element, that is why i have commedted this one and added the event handler in the parent element in the bottom. 
+        // const items = document.getElementsByClassName('item');
+        // for(item of items){
+        //     item.addEventListener('click', function(event){
+        //         // console.log(event.target.parentNode);
+        //         event.target.parentNode.removeChild(event.target) /* it means i will target one by clicking which is done by the event.target. And by parentNode will get the parent of that clicking element and will tell to remove a child. which child? in the bracket i have event.target - it means the one is clicked that one will be removed. */
+        //     })
+        // }
+        document.getElementById('item-list').addEventListener('click', function(event){
+            console.log(event.target);
+            event.target.parentNode.removeChild(event.target)
+        })
+        document.getElementById('add-item').addEventListener('click', function(event){
+            console.log('add a item');
+        const li = document.createElement('li');
+        li.innerText = 'I am new here'
+        li.classList.add('item')
+        const mainSection = document.getElementById('item-list');
+        mainSection.appendChild(li)
+        })
+
+        /* Now the issue is that the main list items is removed by clicking, but the dynamic those is added by the clicking in the btn is not removed. how to solve it? */
+        /* if i add the item class of the main list item in the dynamic list item. it is still not removed. why?
+        when page load for the first time, js completes it works in the avialable list items. it does not wait to added items as the previous event handler does add in the new items. this is why after adding the same class (item), it still does not removed.
+        i can add event handler in each dynamic list, but the problem is that it will be very heavy and will take lot of memory. 
+        the solution of this problem is that we know that event gets bubble, it means i can add eventhandler in the parent rether than adding in each child element.
+        So i can comment the added event handler in the list item wit the class add event handler newly inn the parent item. As i know via event bubble it will go to the parent. Now the added dynamic one also get removed as the original one.
+        here event delegate means - i do not set the event in the targeted one, rather than i have delegated to the parent or someone in upper level.
+        One important note - if i need to add event handler in the dynamic contents, i will add event handler in the parent element rether than child elements / dynamic contents.Althoug the main work will be happend in the child.
+        */
+    </script>
+</body>
+</html>

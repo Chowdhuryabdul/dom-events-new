@@ -20,3 +20,24 @@
   function makePurple(){
     document.body.style.backgroundColor = 'purple'
   }
+
+function findSomething(){
+    document.body.style.backgroundColor = 'green'
+}
+
+const makeWhiteBtn = document.getElementById('make-white');
+makeWhiteBtn.onclick = function makeWhite(){
+    document.body.style.backgroundColor = 'white'
+} 
+
+const makeSkyBtn = document.getElementById('make-sky');
+makeSkyBtn.onclick = makeSky()
+function makeSky(){
+    makeSkyBtn.innerText = 'make noting'
+}
+
+document.getElementById('make-new').addEventListener('click', function(){
+    document.body.style.backgroundColor = 'green'
+})
+
+    

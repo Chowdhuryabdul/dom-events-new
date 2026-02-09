@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Want to make a commentBox</title>
+</head>
+<style>
+    .comment{
+        background-color: skyblue;;
+        border: 2px solid red;
+        border-radius: 10px;
+        padding: 10px;
+    }
+</style>
+<body>
+    <h1>My awesome commentbox. Write what in your mind!!</h1>
+    <section>
+        <h1>All comments here</h1>
+        <div id="comment-container">
+            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, provident similique quos nam labore harum, tenetur id quo ipsam voluptate expedita aliquid officia consequuntur! Eligendi perspiciatis eveniet necessitatibus quos cumque.</p>
+            <p class="comment">Quis repellendus quisquam, ipsa incidunt quae quos harum officiis eum nesciunt iure. Voluptatibus, amet ea? Maxime veritatis debitis reprehenderit pariatur soluta consequatur numquam ut recusandae, voluptatem doloribus provident excepturi corrupti?</p>
+            <p class="comment">Repellat id itaque quidem asperiores iure aperiam vel eum tempore officia quaerat excepturi est aliquam hic, nostrum, laboriosam quisquam nihil nobis ratione, cupiditate magnam. Animi deleniti asperiores eligendi voluptatibus distinctio.</p>
+
+            <textarea name="" id="text-area" cols="30" rows="5"></textarea>
+            <br>
+            <button id="btn-post">post</button>
+        </div>
+    </section>
+
+    <section>
+        <h1>This the new section to add the comments</h1>
+      <div id="comment-container-1">
+        <p class="comment-lorem">Lorem ipsum dolor sit amet.</p>
+        <p class="comment-lorem">Voluptas eius adipisci iure dolore.</p>
+        <p class="comment-lorem">Ullam tenetur maxime quos eius.</p>
+      </div>
+      <textarea name="" id="comment-area" cols="30" rows="5"></textarea>
+      <br>
+      <button id="click-add">Click and Add</button>
+    </section>
+    <script src="js/comment-box.js"></script>
+</body>
+</html>

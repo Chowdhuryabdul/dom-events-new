@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn-mouse">Micky Mouse minnie</button>
+    <input id="user-name" type="text" placeholder="Your Name">
+    <input id="user-Email" type="text" placeholder="Your Email">
+
+    <script>
+        // document.getElementById('btn-mouse').addEventListener('mouseenter', function(){
+        //     console.log('Mouse is troggered');
+        // })
+        // document.getElementById('btn-mouse').addEventListener('mousemove', function(){
+        //     console.log('now mosue moving like a electric speed');
+        // })
+        // document.getElementById('btn-mouse').addEventListener('mouseout', function(){
+        //     console.log('now it will work to take the mouse out');
+        // })
+
+        // document.getElementById('user-name').addEventListener('focus', function(){
+        //     console.log('You will see how it will focus whne you click to write something');
+        // })
+        // document.getElementById('user-Email').addEventListener('focus', function(){
+        //     console.log('it will also focus here in a same way');
+        // })
+        // document.getElementById('user-name').addEventListener('blur', function(){
+        //     console.log('You will see how it will blur whne you finish with and click out side the box');
+        // })
+        // document.getElementById('user-Email').addEventListener('blur', function(){
+        //     console.log('it will also blur here in a same way');
+        // })
+        document.getElementById('user-Email').addEventListener('keydown', function(even){
+           /*  if i want to know which key is pressed than i have give a parameter in function 'even' */
+           /* if i get where i am writing then i need to add event.target  */
+           /* here i can also get the value to add value with the target  */
+            console.log('typing', even.target.value);
+        })
+        document.getElementById('user-Email').addEventListener('keyup', function(even){
+           /*  if i want to know which key is pressed than i have give a parameter in function 'even' */
+           /* if i get where i am writing then i need to add event.target  */
+           /* here i can also get the value to add value with the target  */
+            console.log('typing', even.target.value);
+        })
+    </script>
+</body>
+</html>
